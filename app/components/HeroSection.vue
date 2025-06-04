@@ -1,8 +1,6 @@
 <script setup lang="ts">
-const route = useRoute();
-
-const { data: hero } = await useAsyncData(route.path, () => {
-  return queryContent("hero").where({ _path: route.path }).findOne();
+const { data: hero } = await useAsyncData("hero", () => {
+  return queryContent("hero").findOne();
 });
 </script>
 
