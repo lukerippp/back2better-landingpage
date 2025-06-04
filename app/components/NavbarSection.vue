@@ -2,7 +2,6 @@
 
 <template>
   <div>
-    <HeroSection />
-    <FooterSection />
+    <h1>Navbar</h1>
   </div>
 </template>
