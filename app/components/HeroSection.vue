@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: hero } = await useAsyncData("hero", () => {
-  return queryContent("hero").findOne();
+  return queryCollection("hero").findOne();
 });
 </script>
 
