@@ -99,9 +99,3 @@ function toggleMobileMenu() {
     </div>
   </nav>
 </template>
-
-<style scoped>
-html {
-  scroll-behavior: smooth;
-}
-</style>
