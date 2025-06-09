@@ -1,17 +1,24 @@
 <script setup lang="ts">
-const { data: hero } = await useAsyncData("herosection", () => {
-  return queryCollection("content").path("/").first();
-});
+// interface HeroData {
+//   title: string;
+//   subheading: string;
+// }
+const props = defineProps<{
+  title: string;
+  subheading: string;
+  loading: boolean;
+  description: string;
+}>();
 </script>
 
 <template>
-  <div class="flex flex-col">
-    <pre>hero;{{ hero }}</pre>
-    <section v-if="hero" class="hero">
-      <h1>{{ hero.title }}</h1>
-      <p>{{ hero.subheading }}</p>
+  <div v-if="loading" class="flex flex-col">Loading</div>
+  <div v-else class="flex flex-col">
+    <section class="hero">
+      <h1>{{ title }}</h1>
+      <p>{{ subheading }}</p>
+      <p>{{ description }}</p>
       <ContentRenderer :value="hero" />
     </section>
-    <div v-else>Loading...</div>
   </div>
 </template>
