@@ -1,6 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
+  <pre>index</pre>
   <div class="flex flex-col min-h-screen">
     <NavbarSection />
 

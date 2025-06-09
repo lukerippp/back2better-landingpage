@@ -1,29 +1,23 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/eslint", "@nuxt/ui-pro"],
-
-  devtools: {
-    enabled: true,
-  },
-
-  css: ["~/assets/css/main.css"],
-
-  routeRules: {
-    "/": { prerender: true },
-  },
-
+  compatibilityDate: '2025-05-15',
   future: {
     compatibilityVersion: 4,
   },
+  devtools: { enabled: true },
 
-  compatibilityDate: "2025-01-15",
-
-  eslint: {
-    config: {
-      stylistic: {
-        commaDangle: "never",
-        braceStyle: "1tbs",
-      },
-    },
-  },
-});
+  modules: [
+    '@nuxt/content',
+    '@nuxt/eslint',
+    '@nuxt/fonts',
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@nuxt/scripts',
+    '@nuxt/test-utils',
+    '@nuxt/ui'
+  ],
+  css: ["~~/app/assets/css/main.css"],
+  // routeRules: {
+  //   "/": { prerender: true },
+  // },
+})
