@@ -1,8 +1,4 @@
 <script setup lang="ts">
-// interface HeroData {
-//   title: string;
-//   subheading: string;
-// }
 const props = defineProps<{
   title: string;
   subheading: string;
