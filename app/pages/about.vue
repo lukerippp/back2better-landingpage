@@ -11,11 +11,13 @@ const { data: hero } = await useAsyncData("aboutsection", () => {
     <NavbarSection />
 
     <main class="flex-grow flex items-center justify-center">
+      <pre>hero;{{ hero }}</pre>
       <HeroSection
         :title="hero.title"
         :subheading="hero.subheading"
         :loading="false"
         :description="hero.description"
+        :body="hero.body"
       />
     </main>
 
