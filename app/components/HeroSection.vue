@@ -8,6 +8,7 @@ const props = defineProps<{
   subheading: string;
   loading: boolean;
   description: string;
+  body?: object;
 }>();
 </script>
 
@@ -18,7 +19,7 @@ const props = defineProps<{
       <h1>{{ title }}</h1>
       <p>{{ subheading }}</p>
       <p>{{ description }}</p>
-      <ContentRenderer :value="hero" />
+      <ContentRenderer :value="body" />
     </section>
   </div>
 </template>
