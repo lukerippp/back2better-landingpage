@@ -1,12 +1,12 @@
 <script setup lang="ts"></script>
 
 <template>
+  <pre>index</pre>
   <div class="flex flex-col min-h-screen">
-    <pre>here;</pre>
-    <!-- <NavbarSection />
+    <NavbarSection />
     <main class="flex-grow flex items-center justify-center">
       <HeroSection />
     </main>
-    <FooterSection /> -->
+    <FooterSection />
   </div>
 </template>
