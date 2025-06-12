@@ -9,13 +9,14 @@ const props = defineProps<{
 </script>
 
 <template>
+  <!-- https://ui.nuxt.com/components/page-hero -->
   <div v-if="loading" class="flex flex-col">Loading</div>
   <div v-else class="flex flex-col">
     <section class="hero">
       <h1>{{ title }}</h1>
       <p>{{ subheading }}</p>
       <p>{{ description }}</p>
-      <ContentRenderer :value="body" />
+      <template v-if="body"><ContentRenderer :value="body" /></template>
     </section>
   </div>
 </template>

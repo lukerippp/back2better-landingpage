@@ -13,7 +13,33 @@ export default defineContentConfig({
         // tags: z.array(z.string()),
         // image: z.string(),
         // date: z.date(),
-        subheading: z.string(),
+        description: z.string(),
+        image: z.object({
+          src: z.string(),
+          alt: z.string(),
+        }),
+        image2: z.object({
+          src: z.string(),
+          alt: z.string(),
+        }),
+        image3: z.object({
+          src: z.string(),
+          alt: z.string(),
+        }),
+        image4: z.object({
+          src: z.string(),
+          alt: z.string(),
+        }),
+        cards: z.array(
+          z.object({
+            title: z.string(),
+            description: z.string(),
+            image: z.object({
+              src: z.string(),
+              alt: z.string(),
+            }),
+          })
+        ),
       }),
     }),
   },

@@ -10,9 +10,10 @@ function toggleMobileMenu() {
   <nav class="bg-white shadow-md fixed top-0 w-full z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="text-2xl font-bold text-blue-700">Back2Better</div>
+      <UContentSearchButton variant="subtle" :collapsed="false" size="lg" />
 
       <div class="hidden md:flex space-x-8 items-center">
-        <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium"
+        <a href="#home" class="text-gray-700 hover:text-blue-500 font-medium"
           >Home</a
         >
         <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium"

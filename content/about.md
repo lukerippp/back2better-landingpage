@@ -1,7 +1,7 @@
 ---
 title: "about us"
-subheading: "this is about us"
-description: "HHH"
+description: "this is about us"
+headline: "HHH"
 ---
 
 Hello world. here be the about page
