@@ -14,6 +14,7 @@ export default defineContentConfig({
         // image: z.string(),
         // date: z.date(),
         description: z.string(),
+        title: z.string(),
         image: z.object({
           src: z.string(),
           alt: z.string(),
@@ -30,6 +31,10 @@ export default defineContentConfig({
           src: z.string(),
           alt: z.string(),
         }),
+        image5: z.object({
+          src: z.string(),
+          alt: z.string(),
+        }),
         cards: z.array(
           z.object({
             title: z.string(),
@@ -38,6 +43,19 @@ export default defineContentConfig({
               src: z.string(),
               alt: z.string(),
             }),
+          })
+        ),
+        features: z.array(
+          z.object({
+            title: z.string(),
+            description: z.string(),
+            icon: z.object({}),
+          })
+        ),
+        faqs: z.array(
+          z.object({
+            question: z.string(),
+            answer: z.string(),
           })
         ),
       }),
