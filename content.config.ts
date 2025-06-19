@@ -58,6 +58,22 @@ export default defineContentConfig({
             answer: z.string(),
           })
         ),
+        features2: z.array(
+          z.object({
+            title: z.string(),
+            description: z.string(),
+            icon: z.object({}),
+          })
+        ),
+        hero2: z.object({
+          headline: z.string(),
+          title: z.string(),
+          description: z.string(),
+          image: z.object({
+            src: z.string(),
+            alt: z.string(),
+          }),
+        }),
       }),
     }),
   },

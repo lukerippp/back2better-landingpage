@@ -11,6 +11,8 @@ const items = faqs.value.map((faq, idx) => ({
   value: idx.toString(),
 }));
 const features = computed(() => page.value?.features ?? []);
+const features2 = computed(() => page.value?.features2 ?? []);
+const hero2 = computed(() => page.value?.hero2 ?? {});
 function scrollToBottom() {
   window.scrollTo({
     top: document.documentElement.scrollHeight,
@@ -20,27 +22,15 @@ function scrollToBottom() {
 </script>
 
 <template>
-  <div class="flex flex-col min-h-screen pt-16">
+  <div class="flex flex-col min-h-screen">
     <UPageHeader>
       <NavbarSection />
     </UPageHeader>
-
-    <!-- <UAlert
-      title="Beta Testing"
-      description="Back2Better is still in Beta Phase"
-      color="secondary"
-    /> -->
 
     <main class="flex-grow flex items-center justify-center">
       <UPageHero
         v-bind="hero"
         headline="Back2Better"
-        :ui="{
-          title: 'text-4xl font-bold font-display text-red-500',
-          headline: 'text-primary text-6xl',
-          root: 'pt-16',
-          content: 'flex items-center gap-8',
-        }"
         orientation="horizontal"
         class="mb-8"
       >
@@ -60,81 +50,43 @@ function scrollToBottom() {
     </main>
 
     <UPageSeperator class="my-10" />
+
     <UBanner
-      color="primary"
-      variant="subtle"
       title="Empower your practice. Enhance patient recovery."
+      class="font-display text-center"
     >
     </UBanner>
-    <UPageSection
-      id="banner"
-      title="Empower your practice. Enhance patient recovery."
-    >
-      <p class="max-w-2xl mx-auto text-center">
-        Join Back2Better and revolutionise your customer's rehabilitation
-        Journey.
-      </p>
-    </UPageSection>
 
     <UPageSeperator class="my-10" />
 
     <UPageSection
-      id="features"
       title="The Back2Better Difference"
       description="What we offer"
       orientation="horizontal"
-      :ui="{
-        title: 'text-4xl font-bold',
-      }"
       class="mb-8"
     >
     </UPageSection>
 
     <div
-      class="w-full max-w-7xl mx-auto px-6 flex flex-col-reverse md:flex-row items-start md:items-center gap-6 mb-8"
+      class="w-full max-w-7xl mx-auto px-6 flex flex-col-reverse md:flex-row items-stretch gap-6 mb-8"
     >
       <UPageCard
-        class="w-full md:w-1/3"
-        title="Virtual Sessions"
-        description="Learn about our virtual telehealth consultation sessions"
+        v-for="(feat, i) in features2"
+        :key="i"
+        :title="feat.title"
+        :description="feat.description"
         variant="soft"
-        orientation="vertical"
-        reverse="false"
+        orientation="horizontal"
+        class="w-full md:w-1/3"
       >
         <img
-          v-bind="hero.image2"
-          class="w-1/2 h-auto rounded-lg shadow-2xl ring ring-default"
-        />
-      </UPageCard>
-      <UPageCard
-        class="w-full md:w-1/3"
-        title="Personalized recovery"
-        description="Learn about our personalized recovery program, tailored to you"
-        variant="soft"
-        orientation="vertical"
-        reverse="false"
-      >
-        <img
-          v-bind="hero.image3"
-          class="w-1/2 h-auto rounded-lg shadow-2xl ring ring-default"
-        />
-      </UPageCard>
-      <UPageCard
-        class="w-full md:w-1/3"
-        title="Licensed Physiotherapists"
-        description="See our list of qualified licensed physiotherapists"
-        variant="soft"
-        orientation="vertical"
-        reverse="false"
-      >
-        <img
-          v-bind="hero.image4"
-          class="w-1/2 h-auto rounded-lg shadow-2xl ring ring-default"
+          :src="hero[`image${i + 2}`].src"
+          class="w-full h-full object-cover rounded-lg shadow-2xl"
         />
       </UPageCard>
     </div>
 
-    <UPageSeperator class="my-2" />
+    <UPageSeperator class="my-4" />
 
     <UPageSection class="mb-8">
       <UPageGrid class="grid grid-cols-2 gap-6">
@@ -148,14 +100,9 @@ function scrollToBottom() {
       </UPageGrid>
     </UPageSection>
 
-    <UPageSeperator class="my-4" />
+    <UPageSeperator class="my-8" />
 
-    <UPageSection
-      orientation="horizontal"
-      id="faqs"
-      title="Frequently Asked Questions"
-      :ui="{ title: 'text-xl font-bold' }"
-    >
+    <UPageSection orientation="horizontal" title="Frequently Asked Questions">
       <UPageAccordion class="mb-8" :items="items" default-value="0">
         <template #body="{ item }">
           <MDC :value="item.content" unwrap="p" />
@@ -170,12 +117,6 @@ function scrollToBottom() {
         title="For therapists seeking streamlined management and patients seeking a smoother recovery, our platform is your digital companion. Begin a new chapter in rehab excellence."
         headline="At the intersection of innovation and care, lies Back2Better."
         description="Whether you're a patient seeking tailored therapy or a therapist aiming to expand your reach, Back2Better places control firmly in your hands."
-        :ui="{
-          title: 'text-2xl font-bold',
-          headline: 'text-primary text-6xl',
-          root: 'pt-16',
-          content: 'flex items-center gap-8',
-        }"
         orientation="horizontal"
         class="mb-8"
       >
@@ -188,14 +129,9 @@ function scrollToBottom() {
       </div>
     </main>
 
-    <UPageSeperator class="my-10" />
+    <UPageSeperator class="my-8" />
 
-    <UPageSection
-      id="features"
-      title="Why Choose Back2Better"
-      :ui="{ title: 'text-4xl font-bold' }"
-      class="mb-8"
-    >
+    <UPageSection title="Why Choose Back2Better">
       <div class="grid grid-cols-2 grid-rows-2 gap-6 mt-6">
         <UPageCard
           v-for="(feature, i) in features"
@@ -209,37 +145,25 @@ function scrollToBottom() {
       </div>
     </UPageSection>
 
-    <UPageSeperator class="my-4" />
+    <UPageSeperator class="my-8" />
 
-    <UPageSection
-      id="register"
-      title="Register"
-      orientation="horizontal"
-      :ui="{ title: 'text-4xl font-bold' }"
-    >
+    <UPageSection title="Register" orientation="horizontal">
       <UFormField
-        size="lg"
         label="Register to become a Back2Better Provider Today"
         description="Join the Back2Better platform. By signing up, you'll access tools that simplify and enhance the physiotherapy process. Fill in the details below to get started."
-        :ui="{ label: 'text-lg font-bold' }"
       >
         <UInput placeholder="Enter your email" />
       </UFormField>
     </UPageSection>
 
-    <UPageSeperator class="my-12" />
+    <UPageSeperator class="my-8" />
 
-    <UPageSection
-      id="waffle"
+    <UBanner
+      class="font-display"
       title="Ready to be part of the revolution?"
       description="Welcome to the era where technology seamlessly integrates with therapy, and every patient's recovery journey is prioritised."
-      :ui="{
-        title: 'text-4xl font-bold text-white',
-        root: 'bg-primary text-white py-12',
-        description: 'max-w-xl mx-auto text-center text-white',
-      }"
     >
-    </UPageSection>
+    </UBanner>
 
     <FooterSection />
   </div>

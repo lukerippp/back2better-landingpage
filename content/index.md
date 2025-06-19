@@ -59,6 +59,12 @@ features2:
     description: Learn about our virtual telehealth consultation sessions
   - title: Personalized recovery
     description: Learn about our personalized recovery program, tailored to you
+  - title: Licensed Physiotherapists
+    description: See our list of qualified licensed physiotherapists
+hero2:
+  - headline: At the intersection of innovation and care, lies Back2Better.
+  - title: For therapists seeking streamlined management and patients seeking a smoother recovery, our platform is your digital companion. Begin a new chapter in rehab excellence.
+  - description: Whether you're a patient seeking tailored therapy or a therapist aiming to expand your reach, Back2Better places control firmly in your hands.
 ---
 
 Empower your practice. Enhance patient recovery.
