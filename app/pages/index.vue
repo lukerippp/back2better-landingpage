@@ -51,6 +51,10 @@ function scrollToBottom() {
 
     <UPageSeperator class="my-10" />
 
+    <div class="bg-pink text-center">
+      <UBanner id="example" title="This is a closable banner." close />
+    </div>
+    <br />
     <UBanner
       title="Empower your practice. Enhance patient recovery."
       class="font-display text-center"
