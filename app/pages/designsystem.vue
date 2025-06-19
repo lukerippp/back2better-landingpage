@@ -12,13 +12,22 @@ const { quickfox, lorem, loremipsum } = copy();
 </script>
 <template>
   <UContainer>
+    <header class="space-y-h6 my-h1">
+      <h1 class="display-h1">Design System</h1>
+      <p class="max-w-prose my-h6">
+        This page contains a summary of the design system used in this Nuxt 3
+        application. It includes information about the fonts, colors, and
+        typography used.
+      </p>
+    </header>
+    <USeparator class="my-h1" />
     <div class="space-y-h6 my-h1">
       <section
         class="lg:flex flex-row gap-h6 divide divide-red-100 items-start justify-start"
       >
         <header class="section-header">
           <h2 class="display-h6">Display fonts</h2>
-          <h2 class="display-h6">Roboto Serif</h2>
+          <h2 class="font-display">Roboto Serif</h2>
         </header>
         <div class="grow space-y-h6">
           <h1 class="display-h1">{{ quickfox }}</h1>
@@ -37,7 +46,7 @@ const { quickfox, lorem, loremipsum } = copy();
       >
         <header class="section-header">
           <h2 class="display-h6">Copy fonts</h2>
-          <h2 class="display-h6">Varela Round</h2>
+          <h2 class="font-sans">Varela Round</h2>
         </header>
         <div class="grow space-y-h6">
           <h1 class="text-h1">{{ quickfox }}</h1>
@@ -57,6 +66,6 @@ const { quickfox, lorem, loremipsum } = copy();
 @reference '~~/app/assets/css/main.css';
 
 .section-header {
-  @apply lg:min-w-[160px];
+  @apply lg:min-w-[160px]  sticky top-h6;
 }
 </style>
