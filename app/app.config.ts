@@ -6,13 +6,13 @@ export default defineAppConfig({
     },
   },
   uiPro: {
-    banner: {
-      slots: {
-        root: "bg-primary text-white py-12 flex flex-col items-center text-center justify-center",
-        title: "text-3xl font-bold text-white",
-        container: "flex items-center justify-between gap-3 h-12",
-      },
-    },
+    // banner: {
+    //   slots: {
+    //     root: "bg-primary text-white py-12 flex flex-col items-center text-center justify-center",
+    //     title: "text-3xl font-bold text-white",
+    //     container: "flex items-center justify-between gap-3 h-12",
+    //   },
+    // },
     pageHero: {
       slots: {
         title: "sm:text-5xl lg:text-5xl font-bold ",

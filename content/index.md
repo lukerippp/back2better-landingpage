@@ -56,11 +56,11 @@ features:
     icon: "https://back2better.com.au/_ipx/fit_cover&s_800x600/img/listIcon.svg"
 features2:
   - title: Virtual Sessions
-    description: Learn about our virtual telehealth consultation sessions
+    description: Experience the convenience of professional physiotherapy from anywhere. Our secure video platform connects you with expert therapists in real time so you can get personalized guidance and progress checks right in the comfort of your own home.
   - title: Personalized recovery
-    description: Learn about our personalized recovery program, tailored to you
+    description: Every body is unique, so your rehab plan should be too. Back2Better creates data-driven, custom treatment programs that adapt as you improve, with therapist feedback to help you recover faster and stay motivated every step of the way.
   - title: Licensed Physiotherapists
-    description: See our list of qualified licensed physiotherapists
+    description: Trust your care to fully credentialed professionals with years of hands-on experience. Our network of licensed physiotherapists brings clinical expertise, compassionate support, and the latest best practices to your treatment.
 hero2:
   - headline: At the intersection of innovation and care, lies Back2Better.
   - title: For therapists seeking streamlined management and patients seeking a smoother recovery, our platform is your digital companion. Begin a new chapter in rehab excellence.
