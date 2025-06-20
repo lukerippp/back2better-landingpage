@@ -34,12 +34,6 @@ function scrollToBottom() {
         orientation="horizontal"
         class="mb-8"
       >
-        <button
-          @click="scrollToBottom"
-          class="w-1/2 bg-blue-600 text-white px-8 py-2 rounded-full hover:bg-blue-700 transition"
-        >
-          Register for Beta Access
-        </button>
       </UPageHero>
       <div class="w-1/2 flex justify-end mt-[2cm]">
         <img
@@ -49,15 +43,11 @@ function scrollToBottom() {
       </div>
     </main>
 
-    <UPageSeperator class="my-10" />
-
     <UBanner
       title="Empower your practice. Enhance patient recovery."
       class="font-display text-center"
     >
     </UBanner>
-
-    <UPageSeperator class="my-10" />
 
     <UPageSection
       title="The Back2Better Difference"
@@ -86,8 +76,6 @@ function scrollToBottom() {
       </UPageCard>
     </div>
 
-    <UPageSeperator class="my-4" />
-
     <UPageSection class="mb-8">
       <UPageGrid class="grid grid-cols-2 gap-6">
         <UPageCard
@@ -100,8 +88,6 @@ function scrollToBottom() {
       </UPageGrid>
     </UPageSection>
 
-    <UPageSeperator class="my-8" />
-
     <UPageSection orientation="horizontal" title="Frequently Asked Questions">
       <UPageAccordion class="mb-8" :items="items" default-value="0">
         <template #body="{ item }">
@@ -109,8 +95,6 @@ function scrollToBottom() {
         </template>
       </UPageAccordion>
     </UPageSection>
-
-    <UPageSeperator />
 
     <main class="flex-grow flex items-center justify-center">
       <UPageHero
@@ -129,8 +113,6 @@ function scrollToBottom() {
       </div>
     </main>
 
-    <UPageSeperator class="my-8" />
-
     <UPageSection title="Why Choose Back2Better">
       <div class="grid grid-cols-2 grid-rows-2 gap-6 mt-6">
         <UPageCard
@@ -145,8 +127,6 @@ function scrollToBottom() {
       </div>
     </UPageSection>
 
-    <UPageSeperator class="my-8" />
-
     <UPageSection title="Register" orientation="horizontal">
       <UFormField
         label="Register to become a Back2Better Provider Today"
@@ -155,8 +135,6 @@ function scrollToBottom() {
         <UInput placeholder="Enter your email" />
       </UFormField>
     </UPageSection>
-
-    <UPageSeperator class="my-8" />
 
     <UBanner
       class="font-display"

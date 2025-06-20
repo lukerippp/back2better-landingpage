@@ -15,10 +15,9 @@ export default defineAppConfig({
     },
     pageHero: {
       slots: {
-        title: "text-2xl font-bold font-display",
+        title: "sm:text-5xl lg:text-5xl font-bold ",
         headline: "text-primary text-6xl",
         root: "pt-16",
-        content: "flex items-center gap-8",
       },
     },
     pageSection: {
