@@ -4,11 +4,11 @@ const isMobileMenuOpen = ref(false);
 function toggleMobileMenu() {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
 }
-function scrollToBottom() {
-  window.scrollTo({
-    top: document.documentElement.scrollHeight,
-    behavior: "smooth",
-  });
+function scrollToSection(id: string) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 }
 </script>
 
@@ -17,7 +17,7 @@ function scrollToBottom() {
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="text-2xl font-bold text-blue-700">Back2Better</div>
       <button
-        @click="scrollToBottom"
+        @click="scrollToSection('beta-form')"
         class="ml-4 bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition"
       >
         Register for Beta Access

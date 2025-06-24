@@ -69,3 +69,9 @@
     @apply text-h1 font-display font-bold leading-display;
   }
 }
+.u-page-section__root,
+.u-page-hero__root {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}

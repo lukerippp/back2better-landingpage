@@ -35,6 +35,26 @@ export default defineContentConfig({
           src: z.string(),
           alt: z.string(),
         }),
+        image6: z.object({
+          src: z.string(),
+          alt: z.string(),
+        }),
+        image7: z.object({
+          src: z.string(),
+          alt: z.string(),
+        }),
+        image8: z.object({
+          src: z.string(),
+          alt: z.string(),
+        }),
+        image9: z.object({
+          src: z.string(),
+          alt: z.string(),
+        }),
+        image10: z.object({
+          src: z.string(),
+          alt: z.string(),
+        }),
         cards: z.array(
           z.object({
             title: z.string(),
@@ -65,7 +85,7 @@ export default defineContentConfig({
             icon: z.object({}),
           })
         ),
-        hero2: z.object({
+        info: z.object({
           headline: z.string(),
           title: z.string(),
           description: z.string(),
@@ -73,6 +93,10 @@ export default defineContentConfig({
             src: z.string(),
             alt: z.string(),
           }),
+        }),
+        betaform: z.object({
+          title: z.string(),
+          description: z.string(),
         }),
       }),
     }),

@@ -14,11 +14,14 @@ image4:
   src: https://www.acesportsclinic.com.au/wp-content/uploads/2021/03/Shoulder-treatment-wall-frame-min.jpg
   alt: "heroimage4"
 image5:
-  src: "https://back2better.com.au/_ipx/fit_cover&s_800x600/img/illustration_spring.svg"
+  src: "https://back2better.com.au/_ipx/fit_inside&s_1190x1586/img/phone-mock-up.png"
   alt: "heroimage5"
 image6:
-src: https://back2better.com.au/_ipx/fit_cover&s_800x600/img/bannerIllustration.svg
-alt: heroimage6
+  src: https://back2better.com.au/_ipx/fit_cover&s_800x600/img/bannerIllustration.svg
+  alt: heroimage6
+image7:
+  src: "https://back2better.com.au/_ipx/fit_cover&s_800x600/img/illustration_spring.svg"
+  alt: heroimage7
 cards:
   - title: "Seamless Appointments"
     description: "Book or manage your therapy sessions with just a few taps. Your calendar, now more organized than ever."
@@ -61,10 +64,13 @@ features2:
     description: Every body is unique, so your rehab plan should be too. Back2Better creates data-driven, custom treatment programs that adapt as you improve, with therapist feedback to help you recover faster and stay motivated every step of the way.
   - title: Licensed Physiotherapists
     description: Trust your care to fully credentialed professionals with years of hands-on experience. Our network of licensed physiotherapists brings clinical expertise, compassionate support, and the latest best practices to your treatment.
-hero2:
-  - headline: At the intersection of innovation and care, lies Back2Better.
-  - title: For therapists seeking streamlined management and patients seeking a smoother recovery, our platform is your digital companion. Begin a new chapter in rehab excellence.
-  - description: Whether you're a patient seeking tailored therapy or a therapist aiming to expand your reach, Back2Better places control firmly in your hands.
+info:
+  headline: "At the intersection of innovation and care, lies Back2Better."
+  title: "For therapists seeking streamlined management and patients seeking a smoother recovery, our platform is your digital companion."
+  description: "For therapists seeking streamlined management and patients seeking a smoother recovery, our platform is your digital companion. Whether you're a patient seeking tailored therapy or a therapist aiming to expand your reach, Back2Better places control firmly in your hands."
+betaform:
+  title: "Register to become a Back2Better Provider Today"
+  description: "Join the Back2Better platform. By signing up, you'll access tools that simplify and enhance the physiotherapy process. Fill in the details below to get started."
 ---
 
 Empower your practice. Enhance patient recovery.
